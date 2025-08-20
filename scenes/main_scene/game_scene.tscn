@@ -1,0 +1,61 @@
+[gd_scene load_steps=11 format=3 uid="uid://bqfd552dg8aie"]
+
+[ext_resource type="Script" uid="uid://6r8tlm6ufdh1" path="res://scripts/game_scene.gd" id="1_vo7db"]
+[ext_resource type="Texture2D" uid="uid://jox45shimsok" path="res://asserts/sprites/bg_natural_ocean.jpg" id="2_m0lwc"]
+[ext_resource type="PackedScene" uid="uid://dvswxesc0o6w8" path="res://scenes/seal.tscn" id="3_plty4"]
+[ext_resource type="Script" uid="uid://dxfvwjsiuugnb" path="res://scripts/fish_spawner.gd" id="4_lo515"]
+[ext_resource type="PackedScene" uid="uid://r2qrkxfcqm4i" path="res://scenes/fish.tscn" id="5_r3c8l"]
+[ext_resource type="PackedScene" uid="uid://dssqsk4bgo3k1" path="res://scenes/fish_2.tscn" id="6_m0lwc"]
+[ext_resource type="PackedScene" uid="uid://gtk0fksiu6ft" path="res://scenes/trap.tscn" id="6_r4a3l"]
+[ext_resource type="PackedScene" uid="uid://xfu20we2m7fc" path="res://scenes/killzone.tscn" id="7_ql3ye"]
+[ext_resource type="PackedScene" uid="uid://da6hjvehkdmvn" path="res://scenes/level_ui.tscn" id="8_o8f51"]
+
+[sub_resource type="WorldBoundaryShape2D" id="WorldBoundaryShape2D_iywne"]
+
+[node name="Game" type="Node2D"]
+script = ExtResource("1_vo7db")
+
+[node name="TextureRect" type="TextureRect" parent="."]
+offset_left = -2.0
+offset_top = -1.0
+offset_right = 1154.0
+offset_bottom = 650.0
+texture = ExtResource("2_m0lwc")
+
+[node name="Seal" parent="." instance=ExtResource("3_plty4")]
+z_index = 5
+position = Vector2(1010, 584)
+
+[node name="Camera2D" type="Camera2D" parent="."]
+anchor_mode = 0
+limit_left = -100000
+limit_top = -100000
+limit_right = 100000
+limit_bottom = 100000
+
+[node name="FishSpawner" type="Node2D" parent="."]
+script = ExtResource("4_lo515")
+fish_scene = ExtResource("5_r3c8l")
+fish_2_scene = ExtResource("6_m0lwc")
+trap_scene = ExtResource("6_r4a3l")
+
+[node name="Timer" type="Timer" parent="FishSpawner"]
+wait_time = 1.5
+autostart = true
+
+[node name="Killzone" parent="." instance=ExtResource("7_ql3ye")]
+position = Vector2(596, 776)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Killzone"]
+position = Vector2(0, 8)
+shape = SubResource("WorldBoundaryShape2D_iywne")
+
+[node name="LevelUI" parent="." instance=ExtResource("8_o8f51")]
+
+[node name="Timer" type="Timer" parent="."]
+wait_time = 30.0
+one_shot = true
+autostart = true
+
+[connection signal="timeout" from="FishSpawner/Timer" to="FishSpawner" method="_on_timer_timeout"]
+[connection signal="timeout" from="Timer" to="." method="_on_timer_timeout"]

@@ -1,0 +1,75 @@
+[gd_scene load_steps=10 format=3 uid="uid://dvswxesc0o6w8"]
+
+[ext_resource type="Script" uid="uid://cq7vkddfh6v7" path="res://scripts/seal.gd" id="1_8ksxq"]
+[ext_resource type="Texture2D" uid="uid://0xm2j20myb0e" path="res://asserts/sprites/mizunoikimono_azarasi_siro.png" id="1_gaft1"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_6shdg"]
+atlas = ExtResource("1_gaft1")
+region = Rect2(0, 0, 1000, 752)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_8ksxq"]
+atlas = ExtResource("1_gaft1")
+region = Rect2(0, 0, 1000, 752)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_kjvc3"]
+atlas = ExtResource("1_gaft1")
+region = Rect2(1000, 0, 1000, 752)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_mwuln"]
+atlas = ExtResource("1_gaft1")
+region = Rect2(2000, 0, 1000, 752)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_7s5bf"]
+atlas = ExtResource("1_gaft1")
+region = Rect2(3000, 0, 1000, 752)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_6shdg"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_6shdg")
+}],
+"loop": true,
+"name": &"idle",
+"speed": 0.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_8ksxq")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_kjvc3")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_mwuln")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_7s5bf")
+}],
+"loop": true,
+"name": &"walk",
+"speed": 5.0
+}]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_8ksxq"]
+
+[node name="Seal" type="CharacterBody2D"]
+collision_layer = 4
+collision_mask = 0
+script = ExtResource("1_8ksxq")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+visible = false
+scale = Vector2(0.24, 0.24)
+texture = ExtResource("1_gaft1")
+hframes = 4
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
+scale = Vector2(0.24, 0.24)
+sprite_frames = SubResource("SpriteFrames_6shdg")
+animation = &"idle"
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(-22, 0)
+scale = Vector2(7, 5.291)
+shape = SubResource("CircleShape2D_8ksxq")

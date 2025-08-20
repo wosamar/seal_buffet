@@ -1,0 +1,10 @@
+[gd_scene load_steps=2 format=3 uid="uid://drm5l8jjmnx3a"]
+
+[ext_resource type="Texture2D" uid="uid://cximxlnwqved8" path="res://asserts/sprites/mark_heart_red.png" id="1_v30as"]
+
+[node name="Heart" type="TextureRect"]
+offset_right = 40.0
+offset_bottom = 40.0
+scale = Vector2(0.08, 0.08)
+texture = ExtResource("1_v30as")
+stretch_mode = 4
