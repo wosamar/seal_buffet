@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://0xm2j20myb0e"
-path="res://.godot/imported/mizunoikimono_azarasi_siro.png-0d4e2111ee08fda3d132d5ce8050486a.ctex"
+uid="uid://wolsa44hr21u"
+path="res://.godot/imported/seal_b.png-ea246a8c2ef77a210b1a2c97121a7721.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://asserts/sprites/mizunoikimono_azarasi_siro.png"
-dest_files=["res://.godot/imported/mizunoikimono_azarasi_siro.png-0d4e2111ee08fda3d132d5ce8050486a.ctex"]
+source_file="res://asserts/sprites/seal_b.png"
+dest_files=["res://.godot/imported/seal_b.png-ea246a8c2ef77a210b1a2c97121a7721.ctex"]
 
 [params]
 

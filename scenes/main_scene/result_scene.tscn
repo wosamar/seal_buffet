@@ -1,6 +1,6 @@
 [gd_scene load_steps=3 format=3 uid="uid://d3hgu5j365k16"]
 
-[ext_resource type="Script" uid="uid://ci8sog1durcfk" path="res://scripts/result_scene.gd" id="1_jyvm4"]
+[ext_resource type="Script" uid="uid://ci8sog1durcfk" path="res://scripts/main_scene/result_scene.gd" id="1_jyvm4"]
 [ext_resource type="Texture2D" uid="uid://0t0hbhbeny6y" path="res://asserts/sprites/bg_natural_umi.jpg" id="2_oaq04"]
 
 [node name="ResultScene" type="Control"]

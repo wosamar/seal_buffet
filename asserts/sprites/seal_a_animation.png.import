@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://wolsa44hr21u"
-path="res://.godot/imported/mizunoikimono_azarasi_kuro.png-e98298ab1ed4209279c5b950f6cfd3c6.ctex"
+uid="uid://0xm2j20myb0e"
+path="res://.godot/imported/seal_a_animation.png-e8f9024ad19fb5ee9a67e3dad7cc6a3e.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://asserts/sprites/mizunoikimono_azarasi_kuro.png"
-dest_files=["res://.godot/imported/mizunoikimono_azarasi_kuro.png-e98298ab1ed4209279c5b950f6cfd3c6.ctex"]
+source_file="res://asserts/sprites/seal_a_animation.png"
+dest_files=["res://.godot/imported/seal_a_animation.png-e8f9024ad19fb5ee9a67e3dad7cc6a3e.ctex"]
 
 [params]
 

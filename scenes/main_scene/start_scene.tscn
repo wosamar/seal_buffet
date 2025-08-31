@@ -1,6 +1,6 @@
 [gd_scene load_steps=3 format=3 uid="uid://dxx71fy7khso8"]
 
-[ext_resource type="Script" uid="uid://c32gt6mv3meyc" path="res://scripts/start_scene.gd" id="1_2n1iw"]
+[ext_resource type="Script" uid="uid://c32gt6mv3meyc" path="res://scripts/main_scene/start_scene.gd" id="1_2n1iw"]
 [ext_resource type="Texture2D" uid="uid://crnda6wrcp43y" path="res://asserts/sprites/bg_nangoku.jpg" id="2_iwujw"]
 
 [node name="StartScene" type="Control"]
@@ -38,14 +38,15 @@ texture = ExtResource("2_iwujw")
 layout_mode = 0
 offset_right = 1152.0
 offset_bottom = 649.0
-theme_override_constants/separation = 6
+theme_override_constants/separation = 10
 
 [node name="Control" type="Control" parent="VBoxContainer"]
-custom_minimum_size = Vector2(0, 200)
+custom_minimum_size = Vector2(0, 180)
 layout_mode = 2
 
 [node name="Title" type="Label" parent="VBoxContainer"]
 layout_mode = 2
+size_flags_horizontal = 4
 theme_override_colors/font_color = Color(0.109804, 0.121569, 0.239216, 1)
 theme_override_font_sizes/font_size = 60
 text = "海豹吃豹飽"
@@ -63,6 +64,14 @@ theme_override_font_sizes/font_size = 35
 button_mask = 7
 text = " Start "
 
+[node name="SettingsButton" type="Button" parent="VBoxContainer"]
+visible = false
+layout_mode = 2
+size_flags_horizontal = 4
+theme_override_font_sizes/font_size = 35
+button_mask = 7
+text = "Settings"
+
 [node name="ExitButton" type="Button" parent="VBoxContainer"]
 visible = false
 layout_mode = 2
@@ -71,4 +80,5 @@ theme_override_font_sizes/font_size = 35
 text = " Exit "
 
 [connection signal="pressed" from="VBoxContainer/StartButton" to="." method="_on_start_button_pressed"]
+[connection signal="pressed" from="VBoxContainer/SettingsButton" to="." method="_on_settings_button_pressed"]
 [connection signal="pressed" from="VBoxContainer/ExitButton" to="." method="_on_exit_button_pressed"]

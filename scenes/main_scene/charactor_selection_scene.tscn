@@ -1,0 +1,203 @@
+[gd_scene load_steps=13 format=3 uid="uid://bwga5afjcs5yu"]
+
+[ext_resource type="Script" uid="uid://cc0gxn43xpkov" path="res://scripts/main_scene/charactor_selection_scene.gd" id="1_e04yp"]
+[ext_resource type="Texture2D" uid="uid://b1o24jxcs34xs" path="res://asserts/sprites/bg_ocean_suiheisen.jpg" id="2_pcsxa"]
+[ext_resource type="Texture2D" uid="uid://c0wttve8u7trm" path="res://asserts/sprites/seal_a.png" id="3_730n8"]
+[ext_resource type="Texture2D" uid="uid://wolsa44hr21u" path="res://asserts/sprites/seal_b.png" id="4_2bvat"]
+[ext_resource type="Script" uid="uid://m0hyr10kllr4" path="res://scripts/main_scene/selection_button.gd" id="4_h03lw"]
+[ext_resource type="PackedScene" uid="uid://dvswxesc0o6w8" path="res://scenes/characters/seal_a.tscn" id="5_dy733"]
+[ext_resource type="Texture2D" uid="uid://dlql14cc0f4s2" path="res://asserts/sprites/octopus.png" id="5_na4pu"]
+[ext_resource type="PackedScene" uid="uid://rpymibcf7n3f" path="res://scenes/characters/seal_b.tscn" id="7_4uger"]
+[ext_resource type="PackedScene" uid="uid://ddusg8d2ltdwh" path="res://scenes/characters/octopus.tscn" id="9_xmr5u"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_e6cbr"]
+resource_local_to_scene = true
+bg_color = Color(0.8455, 0.8722, 0.89, 0)
+border_width_left = 5
+border_width_top = 5
+border_width_right = 5
+border_width_bottom = 5
+border_color = Color(0.8, 0.8, 0.8, 0)
+expand_margin_left = 10.0
+expand_margin_right = 10.0
+expand_margin_bottom = 10.0
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_ra36w"]
+resource_local_to_scene = true
+bg_color = Color(0.8455, 0.8722, 0.89, 0)
+border_width_left = 5
+border_width_top = 5
+border_width_right = 5
+border_width_bottom = 5
+border_color = Color(0.8, 0.8, 0.8, 0)
+expand_margin_left = 10.0
+expand_margin_right = 10.0
+expand_margin_bottom = 10.0
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_na4pu"]
+resource_local_to_scene = true
+bg_color = Color(0.8455, 0.8722, 0.89, 0)
+border_width_left = 5
+border_width_top = 5
+border_width_right = 5
+border_width_bottom = 5
+border_color = Color(0.8, 0.8, 0.8, 0)
+expand_margin_left = 10.0
+expand_margin_right = 10.0
+expand_margin_bottom = 10.0
+
+[node name="SelectionScene" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_e04yp")
+
+[node name="TextureRect" type="TextureRect" parent="."]
+layout_mode = 0
+offset_right = 1152.0
+offset_bottom = 648.0
+texture = ExtResource("2_pcsxa")
+
+[node name="MarginContainer" type="MarginContainer" parent="."]
+custom_minimum_size = Vector2(1152, 648)
+layout_mode = 1
+anchors_preset = -1
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="VBoxContainer" type="VBoxContainer" parent="MarginContainer"]
+custom_minimum_size = Vector2(1152, 648)
+layout_mode = 2
+size_flags_horizontal = 4
+size_flags_vertical = 4
+alignment = 1
+
+[node name="Label" type="Label" parent="MarginContainer/VBoxContainer"]
+layout_mode = 2
+theme_override_colors/font_color = Color(0.160784, 0.160784, 0.160784, 1)
+theme_override_font_sizes/font_size = 60
+text = "選擇角色"
+horizontal_alignment = 1
+
+[node name="CharactorSelection" type="HBoxContainer" parent="MarginContainer/VBoxContainer"]
+layout_mode = 2
+size_flags_horizontal = 4
+theme_override_constants/separation = 20
+
+[node name="PanelContainer" type="PanelContainer" parent="MarginContainer/VBoxContainer/CharactorSelection"]
+layout_mode = 2
+theme_override_styles/panel = SubResource("StyleBoxFlat_e6cbr")
+
+[node name="VBoxContainer" type="VBoxContainer" parent="MarginContainer/VBoxContainer/CharactorSelection/PanelContainer"]
+layout_mode = 2
+
+[node name="SealAButton" type="TextureButton" parent="MarginContainer/VBoxContainer/CharactorSelection/PanelContainer/VBoxContainer"]
+custom_minimum_size = Vector2(200, 180)
+layout_mode = 2
+size_flags_horizontal = 4
+size_flags_vertical = 4
+focus_neighbor_right = NodePath("../../../PanelContainer2/VBoxContainer/SealBButton")
+texture_normal = ExtResource("3_730n8")
+ignore_texture_size = true
+stretch_mode = 6
+script = ExtResource("4_h03lw")
+linked_scene = ExtResource("5_dy733")
+
+[node name="Name" type="Label" parent="MarginContainer/VBoxContainer/CharactorSelection/PanelContainer/VBoxContainer"]
+layout_mode = 2
+theme_override_colors/font_color = Color(0.16, 0.16, 0.16, 1)
+theme_override_font_sizes/font_size = 30
+text = "小湯圓"
+horizontal_alignment = 1
+
+[node name="PanelContainer2" type="PanelContainer" parent="MarginContainer/VBoxContainer/CharactorSelection"]
+layout_mode = 2
+theme_override_styles/panel = SubResource("StyleBoxFlat_ra36w")
+
+[node name="VBoxContainer" type="VBoxContainer" parent="MarginContainer/VBoxContainer/CharactorSelection/PanelContainer2"]
+layout_mode = 2
+
+[node name="SealBButton" type="TextureButton" parent="MarginContainer/VBoxContainer/CharactorSelection/PanelContainer2/VBoxContainer"]
+custom_minimum_size = Vector2(200, 180)
+layout_mode = 2
+focus_neighbor_left = NodePath("../../../PanelContainer/VBoxContainer/SealAButton")
+focus_neighbor_right = NodePath("../../../PanelContainer3/VBoxContainer/OctopusButton")
+texture_normal = ExtResource("4_2bvat")
+ignore_texture_size = true
+stretch_mode = 6
+script = ExtResource("4_h03lw")
+linked_scene = ExtResource("7_4uger")
+
+[node name="Name" type="Label" parent="MarginContainer/VBoxContainer/CharactorSelection/PanelContainer2/VBoxContainer"]
+layout_mode = 2
+theme_override_colors/font_color = Color(0.16, 0.16, 0.16, 1)
+theme_override_font_sizes/font_size = 30
+text = "小芝麻"
+horizontal_alignment = 1
+
+[node name="PanelContainer3" type="PanelContainer" parent="MarginContainer/VBoxContainer/CharactorSelection"]
+layout_mode = 2
+theme_override_styles/panel = SubResource("StyleBoxFlat_na4pu")
+
+[node name="VBoxContainer" type="VBoxContainer" parent="MarginContainer/VBoxContainer/CharactorSelection/PanelContainer3"]
+layout_mode = 2
+
+[node name="OctopusButton" type="TextureButton" parent="MarginContainer/VBoxContainer/CharactorSelection/PanelContainer3/VBoxContainer"]
+custom_minimum_size = Vector2(200, 180)
+layout_mode = 2
+focus_neighbor_left = NodePath("../../../PanelContainer2/VBoxContainer/SealBButton")
+texture_normal = ExtResource("5_na4pu")
+ignore_texture_size = true
+stretch_mode = 6
+script = ExtResource("4_h03lw")
+linked_scene = ExtResource("9_xmr5u")
+
+[node name="Name" type="Label" parent="MarginContainer/VBoxContainer/CharactorSelection/PanelContainer3/VBoxContainer"]
+layout_mode = 2
+theme_override_colors/font_color = Color(0.16, 0.16, 0.16, 1)
+theme_override_font_sizes/font_size = 30
+text = "小火鍋"
+horizontal_alignment = 1
+
+[node name="Control" type="Control" parent="MarginContainer/VBoxContainer"]
+custom_minimum_size = Vector2(0, 40)
+layout_mode = 2
+size_flags_vertical = 4
+
+[node name="HBoxContainer" type="HBoxContainer" parent="MarginContainer/VBoxContainer"]
+layout_mode = 2
+size_flags_horizontal = 4
+size_flags_vertical = 4
+
+[node name="Control" type="Control" parent="MarginContainer/VBoxContainer/HBoxContainer"]
+custom_minimum_size = Vector2(20, 0)
+layout_mode = 2
+
+[node name="OKButton" type="Button" parent="MarginContainer/VBoxContainer/HBoxContainer"]
+custom_minimum_size = Vector2(80, 0)
+layout_mode = 2
+size_flags_horizontal = 4
+size_flags_vertical = 4
+theme_override_font_sizes/font_size = 35
+text = "OK"
+
+[node name="Control2" type="Control" parent="MarginContainer/VBoxContainer/HBoxContainer"]
+custom_minimum_size = Vector2(10, 0)
+layout_mode = 2
+
+[node name="CancleButton" type="Button" parent="MarginContainer/VBoxContainer/HBoxContainer"]
+custom_minimum_size = Vector2(150, 0)
+layout_mode = 2
+theme_override_font_sizes/font_size = 35
+text = "Cancle"
+
+[connection signal="pressed" from="MarginContainer/VBoxContainer/CharactorSelection/PanelContainer/VBoxContainer/SealAButton" to="." method="_on_button_pressed"]
+[connection signal="pressed" from="MarginContainer/VBoxContainer/CharactorSelection/PanelContainer2/VBoxContainer/SealBButton" to="." method="_on_button_pressed"]
+[connection signal="pressed" from="MarginContainer/VBoxContainer/CharactorSelection/PanelContainer3/VBoxContainer/OctopusButton" to="." method="_on_button_pressed"]
+[connection signal="pressed" from="MarginContainer/VBoxContainer/HBoxContainer/OKButton" to="." method="_on_ok_button_pressed"]
+[connection signal="pressed" from="MarginContainer/VBoxContainer/HBoxContainer/CancleButton" to="." method="_on_cancle_button_pressed"]

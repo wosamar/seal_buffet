@@ -1,5 +1,10 @@
 extends Node
 
+# Selection
+var selected_seal_scene_path = ""
+var selected_map_path = ""
+
+# Game
 var score = 0
 var stamina = 3
 signal score_updated(int)

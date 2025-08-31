@@ -1,0 +1,79 @@
+[gd_scene load_steps=12 format=3 uid="uid://rpymibcf7n3f"]
+
+[ext_resource type="Script" uid="uid://cq7vkddfh6v7" path="res://scripts/seal.gd" id="1_s3dup"]
+[ext_resource type="Texture2D" uid="uid://0xm2j20myb0e" path="res://asserts/sprites/seal_a_animation.png" id="2_hwk7p"]
+[ext_resource type="Texture2D" uid="uid://wolsa44hr21u" path="res://asserts/sprites/seal_b.png" id="3_hwk7p"]
+[ext_resource type="Texture2D" uid="uid://u5bveti0nblk" path="res://asserts/sprites/seal_b_animation.png" id="4_1lgbp"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_godrg"]
+atlas = ExtResource("3_hwk7p")
+region = Rect2(0, 0, 800, 800)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_t4751"]
+atlas = ExtResource("4_1lgbp")
+region = Rect2(0, 0, 1000, 800)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_qx5mp"]
+atlas = ExtResource("4_1lgbp")
+region = Rect2(3000, 0, 1000, 800)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_kjg1y"]
+atlas = ExtResource("4_1lgbp")
+region = Rect2(2000, 0, 1000, 800)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_0jp3d"]
+atlas = ExtResource("4_1lgbp")
+region = Rect2(1000, 0, 1000, 800)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_6shdg"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_godrg")
+}],
+"loop": true,
+"name": &"idle",
+"speed": 0.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_t4751")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_qx5mp")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_kjg1y")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_0jp3d")
+}],
+"loop": true,
+"name": &"walk",
+"speed": 5.0
+}]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_8ksxq"]
+
+[node name="Seal" type="CharacterBody2D"]
+collision_layer = 4
+collision_mask = 0
+script = ExtResource("1_s3dup")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+visible = false
+scale = Vector2(0.24, 0.24)
+texture = ExtResource("2_hwk7p")
+hframes = 4
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
+scale = Vector2(0.24, 0.24)
+sprite_frames = SubResource("SpriteFrames_6shdg")
+animation = &"walk"
+frame = 1
+frame_progress = 0.961363
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(-22, 0)
+scale = Vector2(7, 5.291)
+shape = SubResource("CircleShape2D_8ksxq")

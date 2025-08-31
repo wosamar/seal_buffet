@@ -1,7 +1,7 @@
 [gd_scene load_steps=6 format=3 uid="uid://da6hjvehkdmvn"]
 
-[ext_resource type="Script" uid="uid://dnkeb84d60nx4" path="res://scripts/level_ui.gd" id="1_exbfu"]
-[ext_resource type="Script" uid="uid://c4wxmpbvbijlm" path="res://scripts/hearts_container.gd" id="2_mb5y1"]
+[ext_resource type="Script" uid="uid://dnkeb84d60nx4" path="res://scripts/main_scene/game_scene_ui.gd" id="1_exbfu"]
+[ext_resource type="Script" uid="uid://c4wxmpbvbijlm" path="res://scripts/main_scene/hearts_container.gd" id="2_mb5y1"]
 [ext_resource type="PackedScene" uid="uid://drm5l8jjmnx3a" path="res://scenes/heart.tscn" id="3_mcfs6"]
 [ext_resource type="Texture2D" uid="uid://cximxlnwqved8" path="res://asserts/sprites/mark_heart_red.png" id="4_t1san"]
 [ext_resource type="Texture2D" uid="uid://bkouhha3s6av6" path="res://asserts/sprites/mark_heart_pink_03.png" id="5_0y3tg"]

@@ -1,7 +1,7 @@
 [gd_scene load_steps=10 format=3 uid="uid://dvswxesc0o6w8"]
 
 [ext_resource type="Script" uid="uid://cq7vkddfh6v7" path="res://scripts/seal.gd" id="1_8ksxq"]
-[ext_resource type="Texture2D" uid="uid://0xm2j20myb0e" path="res://asserts/sprites/mizunoikimono_azarasi_siro.png" id="1_gaft1"]
+[ext_resource type="Texture2D" uid="uid://0xm2j20myb0e" path="res://asserts/sprites/seal_a_animation.png" id="1_gaft1"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_6shdg"]
 atlas = ExtResource("1_gaft1")
@@ -67,7 +67,9 @@ hframes = 4
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
 scale = Vector2(0.24, 0.24)
 sprite_frames = SubResource("SpriteFrames_6shdg")
-animation = &"idle"
+animation = &"walk"
+frame = 3
+frame_progress = 0.40523
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 position = Vector2(-22, 0)

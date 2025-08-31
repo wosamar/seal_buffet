@@ -1,6 +1,6 @@
 [gd_scene load_steps=8 format=3 uid="uid://gtk0fksiu6ft"]
 
-[ext_resource type="Script" uid="uid://btaqcklk67ohh" path="res://scripts/trap.gd" id="1_aucmg"]
+[ext_resource type="Script" uid="uid://btaqcklk67ohh" path="res://scripts/bomb.gd" id="1_aucmg"]
 [ext_resource type="Texture2D" uid="uid://c3tlf0v6a8dhd" path="res://asserts/sprites/hugu.png" id="2_aucmg"]
 [ext_resource type="AudioStream" uid="uid://ddnn2bbpb7veo" path="res://asserts/sounds/explosion.wav" id="3_tk2q1"]
 
