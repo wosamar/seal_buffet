@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://djcu2e8eketkr"
-path="res://.godot/imported/kutiwoageteirusame.png-7a6d01e098215ca53b17c3d996f1e608.ctex"
+uid="uid://b64c5cp04mty3"
+path="res://.godot/imported/images.jpg-229f32eb72a7f072b7b38e2bcf6620b7.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://asserts/sprites/kutiwoageteirusame.png"
-dest_files=["res://.godot/imported/kutiwoageteirusame.png-7a6d01e098215ca53b17c3d996f1e608.ctex"]
+source_file="res://asserts/sprites/repo/images.jpg"
+dest_files=["res://.godot/imported/images.jpg-229f32eb72a7f072b7b38e2bcf6620b7.ctex"]
 
 [params]
 

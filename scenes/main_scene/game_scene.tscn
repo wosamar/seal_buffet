@@ -7,7 +7,7 @@
 [ext_resource type="PackedScene" uid="uid://dssqsk4bgo3k1" path="res://scenes/fish_2.tscn" id="6_m0lwc"]
 [ext_resource type="PackedScene" uid="uid://gtk0fksiu6ft" path="res://scenes/trap.tscn" id="6_r4a3l"]
 [ext_resource type="PackedScene" uid="uid://xfu20we2m7fc" path="res://scenes/killzone.tscn" id="7_ql3ye"]
-[ext_resource type="PackedScene" uid="uid://da6hjvehkdmvn" path="res://scenes/level_ui.tscn" id="8_o8f51"]
+[ext_resource type="PackedScene" uid="uid://da6hjvehkdmvn" path="res://scenes/game_scene_ui.tscn" id="8_o8f51"]
 
 [sub_resource type="CompressedTexture2D" id="CompressedTexture2D_vo7db"]
 load_path = "res://.godot/imported/bg_natural_ocean.jpg-03f69c8bb4ce8f9ab391e913be60a196.ctex"
@@ -57,7 +57,7 @@ position = Vector2(596, 776)
 position = Vector2(0, 8)
 shape = SubResource("WorldBoundaryShape2D_iywne")
 
-[node name="LevelUI" parent="." instance=ExtResource("8_o8f51")]
+[node name="GameSceneUI" parent="." instance=ExtResource("8_o8f51")]
 
 [node name="Timer" type="Timer" parent="."]
 wait_time = 30.0

@@ -1,6 +1,6 @@
 [gd_scene load_steps=13 format=3 uid="uid://bwga5afjcs5yu"]
 
-[ext_resource type="Script" uid="uid://cc0gxn43xpkov" path="res://scripts/main_scene/charactor_selection_scene.gd" id="1_e04yp"]
+[ext_resource type="Script" uid="uid://c5n03hegynlc5" path="res://scripts/main_scene/selection_scene.gd" id="1_dy733"]
 [ext_resource type="Texture2D" uid="uid://b1o24jxcs34xs" path="res://asserts/sprites/bg_ocean_suiheisen.jpg" id="2_pcsxa"]
 [ext_resource type="Texture2D" uid="uid://c0wttve8u7trm" path="res://asserts/sprites/seal_a.png" id="3_730n8"]
 [ext_resource type="Texture2D" uid="uid://wolsa44hr21u" path="res://asserts/sprites/seal_b.png" id="4_2bvat"]
@@ -46,14 +46,17 @@ expand_margin_left = 10.0
 expand_margin_right = 10.0
 expand_margin_bottom = 10.0
 
-[node name="SelectionScene" type="Control"]
+[node name="SelectionScene" type="Control" node_paths=PackedStringArray("selection_container")]
 layout_mode = 3
 anchors_preset = 15
 anchor_right = 1.0
 anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
-script = ExtResource("1_e04yp")
+script = ExtResource("1_dy733")
+selection_container = NodePath("MarginContainer/VBoxContainer/CharactorSelection")
+next_page_path = "res://scenes/main_scene/map_selection_scene.tscn"
+prev_page_path = "res://scenes/main_scene/start_scene.tscn"
 
 [node name="TextureRect" type="TextureRect" parent="."]
 layout_mode = 0

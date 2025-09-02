@@ -1,7 +1,6 @@
-[gd_scene load_steps=12 format=3 uid="uid://ddusg8d2ltdwh"]
+[gd_scene load_steps=11 format=3 uid="uid://ddusg8d2ltdwh"]
 
 [ext_resource type="Script" uid="uid://cq7vkddfh6v7" path="res://scripts/seal.gd" id="1_adj0j"]
-[ext_resource type="Texture2D" uid="uid://0xm2j20myb0e" path="res://asserts/sprites/seal_a_animation.png" id="2_dloel"]
 [ext_resource type="Texture2D" uid="uid://dlql14cc0f4s2" path="res://asserts/sprites/octopus.png" id="3_adj0j"]
 [ext_resource type="Texture2D" uid="uid://v4jv1r2lt0lc" path="res://asserts/sprites/octopus_animation.png" id="4_y6obe"]
 
@@ -59,12 +58,6 @@ animations = [{
 collision_layer = 4
 collision_mask = 0
 script = ExtResource("1_adj0j")
-
-[node name="Sprite2D" type="Sprite2D" parent="."]
-visible = false
-scale = Vector2(0.24, 0.24)
-texture = ExtResource("2_dloel")
-hframes = 4
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
 position = Vector2(0, -20)

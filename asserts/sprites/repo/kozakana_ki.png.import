@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://pujert4x021"
-path="res://.godot/imported/ikimono_kani.png-78027c64d9fbff66e7b567f855dbea0a.ctex"
+uid="uid://dwaws3oepmrd4"
+path="res://.godot/imported/kozakana_ki.png-c50407e4479dff70bf82bddaf29b507c.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://asserts/sprites/ikimono_kani.png"
-dest_files=["res://.godot/imported/ikimono_kani.png-78027c64d9fbff66e7b567f855dbea0a.ctex"]
+source_file="res://asserts/sprites/repo/kozakana_ki.png"
+dest_files=["res://.godot/imported/kozakana_ki.png-c50407e4479dff70bf82bddaf29b507c.ctex"]
 
 [params]
 

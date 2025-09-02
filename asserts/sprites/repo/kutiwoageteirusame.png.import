@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://cukr5qg5vhoy4"
-path="res://.godot/imported/bg_kawara.jpg-a0430f74ec64d799fc48f4fcb34b4827.ctex"
+uid="uid://djcu2e8eketkr"
+path="res://.godot/imported/kutiwoageteirusame.png-d533aea41dddb750add622bc19f620ad.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://asserts/sprites/bg_kawara.jpg"
-dest_files=["res://.godot/imported/bg_kawara.jpg-a0430f74ec64d799fc48f4fcb34b4827.ctex"]
+source_file="res://asserts/sprites/repo/kutiwoageteirusame.png"
+dest_files=["res://.godot/imported/kutiwoageteirusame.png-d533aea41dddb750add622bc19f620ad.ctex"]
 
 [params]
 

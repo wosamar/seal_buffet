@@ -3,15 +3,15 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://dners6d0hggr3"
-path="res://.godot/imported/kozakana_aka.png-b82c280bc60d293d637216d4c9e28766.ctex"
+path="res://.godot/imported/kozakana_aka.png-c2400a928622eeda878cf72f7d4d964a.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://asserts/sprites/kozakana_aka.png"
-dest_files=["res://.godot/imported/kozakana_aka.png-b82c280bc60d293d637216d4c9e28766.ctex"]
+source_file="res://asserts/sprites/repo/kozakana_aka.png"
+dest_files=["res://.godot/imported/kozakana_aka.png-c2400a928622eeda878cf72f7d4d964a.ctex"]
 
 [params]
 

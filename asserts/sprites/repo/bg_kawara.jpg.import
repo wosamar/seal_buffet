@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://dc87by5bwlpv4"
-path="res://.godot/imported/hirame.png-8498d12694ccc7ae9cacce3075270588.ctex"
+uid="uid://cukr5qg5vhoy4"
+path="res://.godot/imported/bg_kawara.jpg-051a951dd10d1487032d5cab22258d37.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://asserts/sprites/hirame.png"
-dest_files=["res://.godot/imported/hirame.png-8498d12694ccc7ae9cacce3075270588.ctex"]
+source_file="res://asserts/sprites/repo/bg_kawara.jpg"
+dest_files=["res://.godot/imported/bg_kawara.jpg-051a951dd10d1487032d5cab22258d37.ctex"]
 
 [params]
 
