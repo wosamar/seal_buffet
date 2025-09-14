@@ -107,6 +107,7 @@ shape = SubResource("CircleShape2D_tk2q1")
 
 [node name="PickupSound" type="AudioStreamPlayer2D" parent="."]
 stream = ExtResource("3_tk2q1")
+bus = &"SFX"
 
 [node name="AnimationPlayer" type="AnimationPlayer" parent="."]
 libraries = {

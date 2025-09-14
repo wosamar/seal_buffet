@@ -18,4 +18,8 @@ func _on_title_button_pressed() -> void:
 func _ready() -> void:
 	var final_score = GameManager.score
 	score_label.text = "Score：" + str(final_score)
-	result_label.text = GameManager.get_ending_text(final_score)
+	result_label.text = GameManager.get_ending_text(final_score)	
+	
+	MusicManager.stop_music()
+	await get_tree().create_timer(0.8).timeout
+	MusicManager.play_music("res://asserts/music/いっしょにおさんぽ。.mp3")

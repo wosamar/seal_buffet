@@ -6,6 +6,7 @@ extends Node2D
 func _ready():
 	_load_map()
 	_load_player()
+	MusicManager.play_music("res://asserts/music/famipop4.mp3")
 
 func _on_timer_timeout() -> void:
 	GameManager.end_game()
