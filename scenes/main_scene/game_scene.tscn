@@ -1,4 +1,4 @@
-[gd_scene load_steps=11 format=3 uid="uid://bqfd552dg8aie"]
+[gd_scene load_steps=13 format=3 uid="uid://bqfd552dg8aie"]
 
 [ext_resource type="Script" uid="uid://6r8tlm6ufdh1" path="res://scripts/main_scene/game_scene.gd" id="1_vo7db"]
 [ext_resource type="PackedScene" uid="uid://dvswxesc0o6w8" path="res://scenes/characters/seal_a.tscn" id="3_plty4"]
@@ -13,6 +13,12 @@
 load_path = "res://.godot/imported/bg_natural_ocean.jpg-03f69c8bb4ce8f9ab391e913be60a196.ctex"
 
 [sub_resource type="WorldBoundaryShape2D" id="WorldBoundaryShape2D_iywne"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_vo7db"]
+size = Vector2(520, 648)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_m0lwc"]
+size = Vector2(520, 648)
 
 [node name="Game" type="Node2D"]
 script = ExtResource("1_vo7db")
@@ -63,6 +69,20 @@ shape = SubResource("WorldBoundaryShape2D_iywne")
 wait_time = 30.0
 one_shot = true
 autostart = true
+
+[node name="CanvasLayer" type="CanvasLayer" parent="."]
+
+[node name="LeftZone" type="TouchScreenButton" parent="CanvasLayer"]
+modulate = Color(1, 1, 1, 0.627451)
+position = Vector2(260, 325)
+shape = SubResource("RectangleShape2D_vo7db")
+action = "ui_left"
+
+[node name="RightZone" type="TouchScreenButton" parent="CanvasLayer"]
+modulate = Color(1, 1, 1, 0.627451)
+position = Vector2(892, 325)
+shape = SubResource("RectangleShape2D_m0lwc")
+action = "ui_right"
 
 [connection signal="timeout" from="FishSpawner/Timer" to="FishSpawner" method="_on_timer_timeout"]
 [connection signal="timeout" from="Timer" to="." method="_on_timer_timeout"]

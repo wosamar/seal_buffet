@@ -44,7 +44,11 @@ theme_override_constants/separation = 10
 custom_minimum_size = Vector2(0, 180)
 layout_mode = 2
 
-[node name="Title" type="Label" parent="VBoxContainer"]
+[node name="VBoxContainer" type="VBoxContainer" parent="VBoxContainer"]
+layout_mode = 2
+theme_override_constants/separation = -10
+
+[node name="Title" type="Label" parent="VBoxContainer/VBoxContainer"]
 layout_mode = 2
 size_flags_horizontal = 4
 theme_override_colors/font_color = Color(0.109804, 0.121569, 0.239216, 1)
@@ -52,6 +56,14 @@ theme_override_font_sizes/font_size = 60
 text = "海豹吃豹飽"
 horizontal_alignment = 1
 vertical_alignment = 1
+
+[node name="Subtitle" type="Label" parent="VBoxContainer/VBoxContainer"]
+layout_mode = 2
+size_flags_horizontal = 4
+theme_override_colors/font_color = Color(0.3168, 0.327067, 0.44, 1)
+theme_override_font_sizes/font_size = 26
+text = "Sealy Belly"
+horizontal_alignment = 1
 
 [node name="Control2" type="Control" parent="VBoxContainer"]
 custom_minimum_size = Vector2(0, 120)
