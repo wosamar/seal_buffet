@@ -5,7 +5,9 @@ var selected_seal_scene_path = ""
 var selected_map_path = ""
 
 # Settings
-var move_speed_multiplier: float = 1.0
+enum Difficulty { EASY, MEDIUM, HARD, EXPERT }
+var current_difficulty: Difficulty = Difficulty.EASY
+var game_speed_multiplier: float = 1.0
 
 # Game
 var score = 0
@@ -47,6 +49,7 @@ var ending_texts = {
 	0: "ENDING_0",       # 就這點分數？... / Is that all?...
 	1000: "ENDING_1000", # 不錯喔！... / Not bad!...
 	2500: "ENDING_2500", # 恭喜你！... / Congratulations!...
+	4000: "ENDING_4000", # 太厲害了！... / Amazing!...
 	5000: "ENDING_5000"  # 不可思議！... / Incredible!...
 }
 

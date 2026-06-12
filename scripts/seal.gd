@@ -32,14 +32,14 @@ func _physics_process(delta: float) -> void:
 	
 	# 移動角色
 	if direction:
-		velocity.x = direction * SPEED * GameManager.move_speed_multiplier
+		velocity.x = direction * SPEED * GameManager.game_speed_multiplier
 	else:
-		velocity.x = move_toward(velocity.x, 0, SPEED * GameManager.move_speed_multiplier)
+		velocity.x = move_toward(velocity.x, 0, SPEED * GameManager.game_speed_multiplier)
 	
 	# 播放動畫
 	if velocity.length() > 0:
 		# 如果正在移動，播放「走路」動畫，並根據移動倍率調整動畫速度
-		animated_sprite_2d.speed_scale = GameManager.move_speed_multiplier
+		animated_sprite_2d.speed_scale = GameManager.game_speed_multiplier
 		animated_sprite_2d.play("walk")
 	else:
 		# 如果沒有移動，停止動畫並切換到「待機」狀態

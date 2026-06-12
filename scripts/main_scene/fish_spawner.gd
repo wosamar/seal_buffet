@@ -46,6 +46,6 @@ func _on_timer_timeout() -> void:
 		spawn_object(fish_scene)
 
 		
-	var new_wait_time = randf_range(min_spawn_time, max_spawn_time)
+	var new_wait_time = randf_range(min_spawn_time, max_spawn_time) / GameManager.game_speed_multiplier
 	$Timer.wait_time = new_wait_time
 	$Timer.start()
