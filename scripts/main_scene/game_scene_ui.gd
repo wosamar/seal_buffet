@@ -11,7 +11,7 @@ func _ready() -> void:
 	GameManager.score_updated.connect(update_score_display)
 
 func _process(delta):
-	time_label.text = "剩餘時間：" + str(int(timer.time_left) + 1)
+	time_label.text = tr("TIME_LEFT") + str(int(timer.time_left) + 1)
 
 func update_score_display(score):
-	score_label.text = "Score：" + str(score)
+	score_label.text = tr("SCORE") + str(score)

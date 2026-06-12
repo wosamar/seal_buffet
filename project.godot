@@ -32,6 +32,10 @@ theme/custom_font="uid://b4qgcsvl4ccc5"
 
 pointing/emulate_touch_from_mouse=true
 
+[internationalization]
+
+locale/translations=PackedStringArray("res://translations.en.translation", "res://translations.zh_TW.translation")
+
 [rendering]
 
 renderer/rendering_method="gl_compatibility"

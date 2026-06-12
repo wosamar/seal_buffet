@@ -53,7 +53,7 @@ layout_mode = 2
 size_flags_horizontal = 4
 theme_override_colors/font_color = Color(0.109804, 0.121569, 0.239216, 1)
 theme_override_font_sizes/font_size = 60
-text = "海豹吃豹飽"
+text = "TITLE"
 horizontal_alignment = 1
 vertical_alignment = 1
 
@@ -74,7 +74,7 @@ layout_mode = 2
 size_flags_horizontal = 4
 theme_override_font_sizes/font_size = 35
 button_mask = 7
-text = " Start "
+text = "START"
 
 [node name="SettingsButton" type="Button" parent="VBoxContainer"]
 visible = false
@@ -82,15 +82,38 @@ layout_mode = 2
 size_flags_horizontal = 4
 theme_override_font_sizes/font_size = 35
 button_mask = 7
-text = "Settings"
+text = "SETTINGS"
 
 [node name="ExitButton" type="Button" parent="VBoxContainer"]
 visible = false
 layout_mode = 2
 size_flags_horizontal = 4
 theme_override_font_sizes/font_size = 35
-text = " Exit "
+text = "EXIT"
+
+[node name="LanguageContainer" type="HBoxContainer" parent="."]
+layout_mode = 1
+anchors_preset = 1
+anchor_left = 1.0
+anchor_right = 1.0
+offset_left = -220.0
+offset_top = 20.0
+offset_right = -20.0
+offset_bottom = 60.0
+grow_horizontal = 0
+theme_override_constants/separation = 10
+alignment = 2
+
+[node name="TCButton" type="Button" parent="LanguageContainer"]
+layout_mode = 2
+text = " 中文 "
+
+[node name="ENButton" type="Button" parent="LanguageContainer"]
+layout_mode = 2
+text = " EN "
 
 [connection signal="pressed" from="VBoxContainer/StartButton" to="." method="_on_start_button_pressed"]
 [connection signal="pressed" from="VBoxContainer/SettingsButton" to="." method="_on_settings_button_pressed"]
 [connection signal="pressed" from="VBoxContainer/ExitButton" to="." method="_on_exit_button_pressed"]
+[connection signal="pressed" from="LanguageContainer/TCButton" to="." method="_on_tc_button_pressed"]
+[connection signal="pressed" from="LanguageContainer/ENButton" to="." method="_on_en_button_pressed"]

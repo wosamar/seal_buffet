@@ -41,10 +41,10 @@ func end_game():
 	get_tree().change_scene_to_file("res://scenes/main_scene/result_scene.tscn")
 	
 var ending_texts = {
-	0: "就這點分數？\n連海豹都看不下去，牠們決定自己去捕魚了", # 海豹有點餓
-	1000: "不錯喔！\n你成功餵飽了一些海豹，但牠們還想吃更多！", # 海豹沒吃飽
-	2500: "恭喜你！\n你是一位捕魚大師，海豹們飽到都不想動了！", # 海豹有點飽
-	5000: "不可思議！你是海豹界的救世主！" # 海豹吃豹飽
+	0: "ENDING_0",       # 就這點分數？... / Is that all?...
+	1000: "ENDING_1000", # 不錯喔！... / Not bad!...
+	2500: "ENDING_2500", # 恭喜你！... / Congratulations!...
+	5000: "ENDING_5000"  # 不可思議！... / Incredible!...
 }
 
 func get_ending_text(final_score: int) -> String:
@@ -56,4 +56,4 @@ func get_ending_text(final_score: int) -> String:
 		if final_score >= score_threshold:
 			best_ending = ending_texts[score_threshold]
 			
-	return best_ending
+	return tr(best_ending)

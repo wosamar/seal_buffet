@@ -58,8 +58,7 @@ custom_minimum_size = Vector2(500, 73)
 layout_mode = 2
 theme_override_colors/font_color = Color(0.109804, 0.121569, 0.239216, 1)
 theme_override_font_sizes/font_size = 25
-text = "海豹
-吃豹飽"
+text = "ENDING_0"
 horizontal_alignment = 1
 autowrap_mode = 2
 
@@ -68,7 +67,7 @@ custom_minimum_size = Vector2(500, 83)
 layout_mode = 2
 theme_override_colors/font_color = Color(0.109804, 0.121569, 0.239216, 1)
 theme_override_font_sizes/font_size = 60
-text = "海豹吃豹飽"
+text = "TITLE"
 horizontal_alignment = 1
 autowrap_mode = 2
 
@@ -76,7 +75,7 @@ autowrap_mode = 2
 layout_mode = 2
 theme_override_colors/font_color = Color(0.109804, 0.121569, 0.239216, 1)
 theme_override_font_sizes/font_size = 40
-text = "Score：0"
+text = "SCORE"
 horizontal_alignment = 1
 
 [node name="Control3" type="Control" parent="VBoxContainer"]
@@ -88,23 +87,22 @@ layout_mode = 2
 size_flags_horizontal = 4
 size_flags_vertical = 0
 theme_override_font_sizes/font_size = 35
-text = " Restart "
+text = "RESTART"
 
 [node name="TitleButton" type="Button" parent="VBoxContainer"]
 layout_mode = 2
 size_flags_horizontal = 4
 theme_override_font_sizes/font_size = 35
-text = " Back to title "
+text = "BACK_TO_TITLE"
 
 [node name="ExitButton" type="Button" parent="VBoxContainer"]
 visible = false
 layout_mode = 2
 size_flags_horizontal = 4
 theme_override_font_sizes/font_size = 35
-text = " Exit "
+text = "EXIT"
 
 [node name="Control" type="Control" parent="."]
-layout_mode = 3
 anchors_preset = 0
 
 [connection signal="pressed" from="VBoxContainer/RestartButton" to="." method="_on_restart_button_pressed"]

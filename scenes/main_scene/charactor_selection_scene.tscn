@@ -84,8 +84,13 @@ alignment = 1
 layout_mode = 2
 theme_override_colors/font_color = Color(0.160784, 0.160784, 0.160784, 1)
 theme_override_font_sizes/font_size = 60
-text = "選擇角色"
+text = "CHOOSE_CHAR"
 horizontal_alignment = 1
+
+[node name="Control" type="Control" parent="MarginContainer/VBoxContainer"]
+custom_minimum_size = Vector2(0, 40)
+layout_mode = 2
+size_flags_vertical = 4
 
 [node name="CharactorSelection" type="HBoxContainer" parent="MarginContainer/VBoxContainer"]
 layout_mode = 2
@@ -100,7 +105,7 @@ theme_override_styles/panel = SubResource("StyleBoxFlat_e6cbr")
 layout_mode = 2
 
 [node name="SealAButton" type="TextureButton" parent="MarginContainer/VBoxContainer/CharactorSelection/PanelContainer/VBoxContainer"]
-custom_minimum_size = Vector2(200, 180)
+custom_minimum_size = Vector2(200, 200)
 layout_mode = 2
 size_flags_horizontal = 4
 size_flags_vertical = 4
@@ -115,7 +120,7 @@ linked_scene = ExtResource("5_dy733")
 layout_mode = 2
 theme_override_colors/font_color = Color(0.16, 0.16, 0.16, 1)
 theme_override_font_sizes/font_size = 30
-text = "小湯圓"
+text = "NAME_SEAL_A"
 horizontal_alignment = 1
 
 [node name="PanelContainer2" type="PanelContainer" parent="MarginContainer/VBoxContainer/CharactorSelection"]
@@ -126,7 +131,7 @@ theme_override_styles/panel = SubResource("StyleBoxFlat_ra36w")
 layout_mode = 2
 
 [node name="SealBButton" type="TextureButton" parent="MarginContainer/VBoxContainer/CharactorSelection/PanelContainer2/VBoxContainer"]
-custom_minimum_size = Vector2(200, 180)
+custom_minimum_size = Vector2(200, 200)
 layout_mode = 2
 focus_neighbor_left = NodePath("../../../PanelContainer/VBoxContainer/SealAButton")
 focus_neighbor_right = NodePath("../../../PanelContainer3/VBoxContainer/OctopusButton")
@@ -140,7 +145,7 @@ linked_scene = ExtResource("7_4uger")
 layout_mode = 2
 theme_override_colors/font_color = Color(0.16, 0.16, 0.16, 1)
 theme_override_font_sizes/font_size = 30
-text = "小芝麻"
+text = "NAME_SEAL_B"
 horizontal_alignment = 1
 
 [node name="PanelContainer3" type="PanelContainer" parent="MarginContainer/VBoxContainer/CharactorSelection"]
@@ -151,7 +156,7 @@ theme_override_styles/panel = SubResource("StyleBoxFlat_na4pu")
 layout_mode = 2
 
 [node name="OctopusButton" type="TextureButton" parent="MarginContainer/VBoxContainer/CharactorSelection/PanelContainer3/VBoxContainer"]
-custom_minimum_size = Vector2(200, 180)
+custom_minimum_size = Vector2(200, 200)
 layout_mode = 2
 focus_neighbor_left = NodePath("../../../PanelContainer2/VBoxContainer/SealBButton")
 texture_normal = ExtResource("5_na4pu")
@@ -164,10 +169,10 @@ linked_scene = ExtResource("9_xmr5u")
 layout_mode = 2
 theme_override_colors/font_color = Color(0.16, 0.16, 0.16, 1)
 theme_override_font_sizes/font_size = 30
-text = "小火鍋"
+text = "NAME_OCTOPUS"
 horizontal_alignment = 1
 
-[node name="Control" type="Control" parent="MarginContainer/VBoxContainer"]
+[node name="Control2" type="Control" parent="MarginContainer/VBoxContainer"]
 custom_minimum_size = Vector2(0, 40)
 layout_mode = 2
 size_flags_vertical = 4
@@ -177,27 +182,23 @@ layout_mode = 2
 size_flags_horizontal = 4
 size_flags_vertical = 4
 
-[node name="Control" type="Control" parent="MarginContainer/VBoxContainer/HBoxContainer"]
-custom_minimum_size = Vector2(20, 0)
-layout_mode = 2
-
 [node name="OKButton" type="Button" parent="MarginContainer/VBoxContainer/HBoxContainer"]
-custom_minimum_size = Vector2(80, 0)
+custom_minimum_size = Vector2(120, 0)
 layout_mode = 2
 size_flags_horizontal = 4
 size_flags_vertical = 4
 theme_override_font_sizes/font_size = 35
 text = "OK"
 
-[node name="Control2" type="Control" parent="MarginContainer/VBoxContainer/HBoxContainer"]
-custom_minimum_size = Vector2(10, 0)
+[node name="Control" type="Control" parent="MarginContainer/VBoxContainer/HBoxContainer"]
+custom_minimum_size = Vector2(40, 0)
 layout_mode = 2
 
 [node name="CancleButton" type="Button" parent="MarginContainer/VBoxContainer/HBoxContainer"]
-custom_minimum_size = Vector2(150, 0)
+custom_minimum_size = Vector2(180, 0)
 layout_mode = 2
 theme_override_font_sizes/font_size = 35
-text = "Cancle"
+text = "CANCLE"
 
 [connection signal="pressed" from="MarginContainer/VBoxContainer/CharactorSelection/PanelContainer/VBoxContainer/SealAButton" to="." method="_on_button_pressed"]
 [connection signal="pressed" from="MarginContainer/VBoxContainer/CharactorSelection/PanelContainer2/VBoxContainer/SealBButton" to="." method="_on_button_pressed"]

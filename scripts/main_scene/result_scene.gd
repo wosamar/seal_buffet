@@ -17,7 +17,7 @@ func _on_title_button_pressed() -> void:
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
 	var final_score = GameManager.score
-	score_label.text = "Score：" + str(final_score)
+	score_label.text = tr("SCORE") + str(final_score)
 	result_label.text = GameManager.get_ending_text(final_score)	
 	
 	MusicManager.stop_music()
