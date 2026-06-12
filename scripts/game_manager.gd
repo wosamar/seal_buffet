@@ -4,6 +4,9 @@ extends Node
 var selected_seal_scene_path = ""
 var selected_map_path = ""
 
+# Settings
+var move_speed_multiplier: float = 1.0
+
 # Game
 var score = 0
 var stamina = 3
